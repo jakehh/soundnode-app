@@ -8,6 +8,7 @@
   },
   "author": "Michael Lancaster",
   "license": "GNU",
+  "chromium-args": "--js-flags='--expose-gc'",
   "window": {
     "title": "Soundnode App",
     "icon": "./soundnode.png",

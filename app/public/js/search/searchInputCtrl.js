@@ -15,11 +15,12 @@ app.controller('SearchInputCtrl', function ($scope, $http, $state, $window, SCap
         // search for artists
         SCapiService.search('users', 4, keyword)
                     .then(function(data) {
-
                         if (data.collection.length < 1) {
                             var error = document.createElement('div');
                             error.innerHTML = '<h4 class="dropdown-title">Unable to find any songs or Users named ' + keyword + '</h4>';
                             dropdown.appendChild(error);
+
+                            var error = null;
                             return false;
                         }
 
@@ -45,6 +46,11 @@ app.controller('SearchInputCtrl', function ($scope, $http, $state, $window, SCap
                         }
 
                         dropdown.appendChild(artists);
+
+                        // Allow GC to clear up memory by nullifying unused variables
+                        var artists = null;
+                        var child = null;
+                        var title = null;
                     })
                     .catch(function(err) {
                         console.error(err);
@@ -84,6 +90,13 @@ app.controller('SearchInputCtrl', function ($scope, $http, $state, $window, SCap
 
                         dropdown.appendChild(tracks);
                         dropdown.appendChild(showAll);
+
+                        // Allow GC to clear up memory by nullifying unused variables
+                        var child = null;
+                        var title = null;
+                        var tracks = null;
+                        var showAll = null;
+                        var data = null;
                     })
                     .then(function(){
                         dropdown.style.display = 'block';
@@ -91,6 +104,8 @@ app.controller('SearchInputCtrl', function ($scope, $http, $state, $window, SCap
                     .catch(function(err) {
                         console.error(err);
                     });
+        // Call Garbage Collection when finished in event
+        gc();
     }
 
     $scope.blurTypeahead = function() {

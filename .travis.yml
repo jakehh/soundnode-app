@@ -1,6 +1,12 @@
 language: node_js
 node_js:
   - "0.12.3"
+before_install:
+  - sudo apt-get install devscripts
+  - echo 'DEBUILD_DPKG_BUILDPACKAGE_OPTS="-us -uc -I -i"\n' >> ~/.devscripts
+  - echo 'DEBUILD_LINTIAN_OPTS="-i -I --show-overrides"' >> ~/.devscripts
 before_script:
   - npm install grunt-cli -g
-script: grunt build
+script:
+  - grunt build
+  - debuild

@@ -10,7 +10,7 @@ deploy:
   provider: releases
   api_key:
     secure: caqLwvWUrbzMxuoX8bt+rjioiVR1pGbz1W9Xkj6spg8t907P3nFJCfN1HE0dMXemJkyfFtIz4393NeeZP5HmCgInOeKUGvWmXbKKjC21TJftpBcIsC/Xdd0C3MzUSAcGrl9HDhvy3n3LTZq53WXEb+Z4+h/E2wQQ5vsTfOM5acI=
-  file: dist/Soundnode/linux64.tar.gz
+  file: ./dist/Soundnode/linux64.tar.gz
   on:
     repo: jakejarrett/soundnode-app
     branch: travis-ci

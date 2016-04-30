@@ -9,7 +9,6 @@ before_script:
 - npm install grunt-cli -g
 script:
 - grunt build
-- yes | debuild
 after_script:
 - tar -cvzf dist/Soundnode/linux64.tar.gz dist/Soundnode/linux64/*
 deploy:

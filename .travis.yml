@@ -1,12 +1,20 @@
 language: node_js
 node_js:
-  - "0.12.3"
+- 0.12.3
 before_install:
-  - sudo apt-get install devscripts
-  - echo 'DEBUILD_DPKG_BUILDPACKAGE_OPTS="-us -uc -I -i"\n' >> ~/.devscripts
-  - echo 'DEBUILD_LINTIAN_OPTS="-i -I --show-overrides"' >> ~/.devscripts
+- sudo apt-get install devscripts
+- echo 'DEBUILD_DPKG_BUILDPACKAGE_OPTS="-us -uc -I -i"\n' >> ~/.devscripts
+- echo 'DEBUILD_LINTIAN_OPTS="-i -I --show-overrides"' >> ~/.devscripts
 before_script:
-  - npm install grunt-cli -g
+- npm install grunt-cli -g
 script:
-  - grunt build
-  - yes | debuild
+- grunt build
+- yes | debuild
+deploy:
+  provider: releases
+  api_key:
+    secure: caqLwvWUrbzMxuoX8bt+rjioiVR1pGbz1W9Xkj6spg8t907P3nFJCfN1HE0dMXemJkyfFtIz4393NeeZP5HmCgInOeKUGvWmXbKKjC21TJftpBcIsC/Xdd0C3MzUSAcGrl9HDhvy3n3LTZq53WXEb+Z4+h/E2wQQ5vsTfOM5acI=
+  file: dist/Soundnode/linux64.tar.gz
+  on:
+    repo: jakejarrett/soundnode-app
+    branch: travis-ci

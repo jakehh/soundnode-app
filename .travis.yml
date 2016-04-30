@@ -5,7 +5,10 @@ before_script:
 - npm install grunt-cli -g
 script:
 - grunt build
+before_deploy:
+- ls dist/Soundnode/
 - tar -cvzf dist/Soundnode/linux64.tar.gz dist/Soundnode/linux64/*
+- ls dist/Soundnode/
 deploy:
   provider: releases
   api_key:

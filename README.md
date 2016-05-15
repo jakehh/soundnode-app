@@ -1,4 +1,5 @@
 [![Stories in Ready](https://badge.waffle.io/Soundnode/soundnode-app.png?label=roadmap&title=roadmap)](https://waffle.io/Soundnode/soundnode-app)
+[![Build Status](https://travis-ci.org/jakejarrett/soundnode-app.svg?branch=travis-ci)](https://travis-ci.org/jakejarrett/soundnode-app)
 Soundnode App
 ============
 

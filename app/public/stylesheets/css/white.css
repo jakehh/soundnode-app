@@ -1,0 +1,42 @@
+body, .ui_app {
+  background:#FFF;
+}
+
+.aside, .player_inner {
+  background: #DDDDDD;
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+.topFrame {
+  background: #E9E9E9;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.ui_title, .player_controls .fa, .fa, .player_user, * {
+  color: #333333;
+}
+
+a, .user_name {
+  color: #666666;
+}
+
+.mainNav_item.active a {
+  color: #000000;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #333333;
+}
+
+input::-webkit-input-placeholder {
+  color: #999999;
+}
+
+.search-form .search_field,
+.search-form .search-icon, .subNav .subNav_button i {
+  color: #999999;
+}
+
+.player_controls .fa.thin::before {
+  -webkit-text-stroke: 1px rgba(0,0,0,0.1);
+}

@@ -10,6 +10,7 @@ guiConfig.getGUI = gui.Window.get();
 guiConfig.init = function () {
     this.getGUI.show();
     this.navBarUserUnAuthenticated();
+    this.setTheme("white");
 };
 
 // close the App
@@ -261,3 +262,10 @@ guiConfig.navBarUserAuthenticated = function() {
     guiConfig.getGUI.menu = nativeMenuBar;
 
 };
+
+/**
+ * Sets the theme (interim function)
+ */
+guiConfig.setTheme = function(theme) {
+  document.getElementById("theme").setAttribute("href", "public/stylesheets/css/" + theme + ".css")
+}

@@ -3,6 +3,7 @@ node_js:
 - 0.12.3
 before_install:
 - sudo apt-get install libdbus-1-dev
+- sudo apt-get install libexpat1-dev
 before_script:
 - npm install grunt-cli -g
 script:

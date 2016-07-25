@@ -5,7 +5,7 @@ before_install:
 - sudo apt-get install libexpat1-dev libexpat1 libglib2.0-dev libdbus-1-dev expat
 - export EXPAT_LIBS=-lexpat
 before_script:
-- npm install grunt-cli -g
+- npm install -g grunt-cli webpack nw-gyp
 script:
 - grunt build
 before_deploy:

@@ -2,7 +2,7 @@ language: node_js
 node_js:
 - 0.12.3
 before_install:
-- sudo apt-get install libexpat1-dev libglib2.0-dev libdbus-1-dev expat
+- sudo apt-get install libexpat1-dev libexpat1 libglib2.0-dev libdbus-1-dev expat
 - export EXPAT_LIBS=-lexpat
 before_script:
 - npm install grunt-cli -g

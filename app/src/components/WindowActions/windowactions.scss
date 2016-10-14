@@ -1,0 +1,89 @@
+@import "../../sass/_variables";
+
+.windowAction {
+  overflow: hidden;
+  float: left;
+  margin: 7px 0 0 0;
+  -webkit-app-region: no-drag;
+
+  &_item {
+    float: left;
+    margin: 13px 5px 0;
+    font-size: 7px;
+    cursor: pointer;
+    border-radius: 15px;
+    padding: 1px 3px;
+    letter-spacing: 0;
+
+
+    &:first-child {
+      margin-left: 10px;
+    }
+
+    &:hover .fa {
+      color: $defaultColor;
+    }
+
+    & .fa {
+      cursor: pointer;
+      color: #222326;
+    }
+  }
+}
+
+.macActionButtons {
+  & #closeApp {
+    background: #FF4441;
+  }
+
+  & #minimizeApp {
+    background: #FFBE00;
+  }
+
+  & #expandApp {
+    background: #00D645;
+  }
+
+  & .fa {
+    opacity: 0;
+  }
+
+  &:hover .fa {
+    opacity: 1;
+    color: #222326;
+  }
+}
+
+.windowsActionButtons {
+  float: right;
+  -webkit-app-region: no-drag;
+  margin: 0;
+
+  & li {
+    margin: 0;
+    padding: 7px 14px 7px;
+    border-radius: 0;
+    &:hover {
+      background: #2C2C2C;
+      .fa {
+        color: #FFF;
+      }
+    }
+  }
+
+  & #minimizeApp {
+    padding: 10px 14px 4px;
+  }
+
+  & #closeApp {
+    padding: 6px 20px 8px;
+    background: #390000;
+    &:hover {
+      background: #530000;
+    }
+  }
+
+  & .fa {
+    color: #FFF;
+  }
+}

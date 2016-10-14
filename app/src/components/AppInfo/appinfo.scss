@@ -1,0 +1,30 @@
+@import "../../sass/_variables";
+
+.appInfo {
+  float: right;
+  margin: 15px 0 0 0;
+  -webkit-app-region: no-drag;
+
+  &_item {
+    margin: 0 10px;
+    float: left;
+
+    & a {
+      font-size: 14px;
+      color: $linkColor;
+      cursor: pointer;
+
+      &:hover {
+        color: #fff;
+      }
+    }
+
+    &:last-child a {
+      display: none;
+      color: $scColor;
+      &.updateAvailable {
+        display: block;
+      }
+    }
+  }
+}

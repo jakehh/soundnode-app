@@ -1,0 +1,16 @@
+.navigationButton {
+  font-size: 14px;
+  margin-top: 8px;
+
+  & .fa {
+    color: #464647;
+  }
+
+  &.goBack {
+
+  }
+
+  &.goForward {
+
+  }
+}

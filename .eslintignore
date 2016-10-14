@@ -1,0 +1,2 @@
+// Ignore webpack file as it will throw an error for the var declarations.
+webpack.config.js

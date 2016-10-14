@@ -1,5 +1,5 @@
 {
-  "name": "Grunt-builder",
+  "name": "Soundnode",
   "version": "0.6.5",
   "main": "app/index.html",
   "description": "Soundnode App is the Soundcloud for desktop",
@@ -13,9 +13,13 @@
   "devDependencies": {
     "babel-core": "^6.0.14",
     "babel-loader": "^6.0.0",
-    "babel-preset-es2015": "^6.0.15",
+    "babel-plugin-syntax-decorators": "^6.13.0",
+    "babel-plugin-transform-decorators": "^6.13.0",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-plugin-transform-function-bind": "^6.8.0",
+    "babel-preset-es2016": "^6.16.0",
     "babel-preset-react": "^6.0.15",
-    "babel-preset-stage-0": "^6.0.15",
+    "babel-preset-stage-0": "^6.16.0",
     "eslint": "^1.8.0",
     "eslint-plugin-react": "^3.7.1",
     "grunt": "^1.0.1",
@@ -27,11 +31,20 @@
     "grunt-shell": "^1.3.0",
     "load-grunt-config": "^0.19.2",
     "time-grunt": "^1.2.2",
-    "webpack": "^1.12.2"
+    "webpack": "^2.1.0-beta.22"
   },
   "dependencies": {
+    "css-loader": "^0.25.0",
+    "eslint": "^3.8.0",
+    "extract-text-webpack-plugin": "^2.0.0-beta.4",
     "react": "^0.14.2",
     "react-dom": "^0.14.2",
+    "react-redux": "^4.4.5",
+    "react-router": "^2.8.1",
+    "react-router-redux": "^4.0.6",
+    "redux": "^3.6.0",
+    "sass-loader": "^4.0.2",
+    "style-loader": "^0.13.1",
     "universal-analytics": "^0.3.11"
   }
 }

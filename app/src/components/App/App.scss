@@ -1,0 +1,15 @@
+@import "../../sass/_variables";
+
+.topFrame {
+  background: $bodyBackground;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  border-top: 2px solid $scColor;
+  border-bottom: 1px solid $separatorDarkColor;
+  box-shadow: 0 0 7px 0px #000;
+  z-index: 100;
+  -webkit-app-region: drag;
+}

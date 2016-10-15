@@ -1,4 +1,4 @@
-import App from '../Components/App/App';
+import App from '../components/App/App';
 
 /**
  * Error handling for modules
@@ -23,6 +23,14 @@ export default {
   childRoutes: [
     {
       path: '/',
+      getComponent(location, cb) {
+        System.import('../pages/home/home.jsx')
+              .then(loadRoute(cb))
+              .catch(errorLoading);
+      }
+    },
+    {
+      path: '*',
       getComponent(location, cb) {
         System.import('../pages/home/home.jsx')
               .then(loadRoute(cb))

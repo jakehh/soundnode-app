@@ -4,10 +4,15 @@ import HistoryActions from '../HistoryActions/HistoryActions';
 import Searchbar from '../Searchbar/Searchbar';
 import AppUpdate from '../AppUpdate/AppUpdate';
 import SettingsDropdown from '../SettingsDropdown/SettingsDropdown';
+import User from '../User/User';
+import Player from '../Player/Player';
+import { createStore } from 'redux'
 import './App.scss';
 
+// const store = createStore(counter)
+
 const App = (props) => (
-  <section className="ui_app">
+  <div className="ui_app">
     <header className="topFrame">
       <WindowActions />
       <HistoryActions />
@@ -17,9 +22,17 @@ const App = (props) => (
         <AppUpdate />
       </ul>
     </header>
+    <aside className="aside">
+      <header className="header">
+        <User />
+      </header>
 
-    {props.children}
-  </section>
+      <Player />
+
+    </aside>
+
+    <div className="mainView">{props.children}</div>
+  </div>
 );
 
 App.propTypes = {

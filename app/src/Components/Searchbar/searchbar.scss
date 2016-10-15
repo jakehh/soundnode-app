@@ -10,7 +10,7 @@
 
     & .search-icon {
       position: absolute;
-      top: 10px;
+      top: 7px;
       right: 5px;
       color: $defaultColor;
       transition: $transitionFastValue;
@@ -24,8 +24,9 @@
       border-radius: 0;
       color: $defaultColor;
       height: auto;
-      padding: 5px 5px 5px;
+      padding: 5px;
       width: 100%;
+
       &:focus {
         box-shadow: none;
         border-bottom-color: $linkColor;
@@ -51,6 +52,8 @@
 .topbarSearch {
   position: absolute;
   left: 205px;
+  padding: 0;
+  margin: 0;
   -webkit-app-region: no-drag;
 }
 

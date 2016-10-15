@@ -1,4 +1,4 @@
-import App from '../components/App/App';
+import App from '../Components/App/App';
 
 /**
  * Error handling for modules

@@ -3396,6 +3396,10 @@ object-assign@^2.0.0:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/object-assign/-/object-assign-2.1.1.tgz#43c36e5d569ff8e4816c4efa8be02d26967c18aa"
 
+object-assign@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/object-assign/-/object-assign-3.0.0.tgz#9bedd5ca0897949bca47e7ff408062d549f587f2"
+
 object-assign@^4.0.0, object-assign@^4.0.1, object-assign@^4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/object-assign/-/object-assign-4.1.0.tgz#7a3b3d0e98063d43f4c03f2e8ae6cd51a86883a0"
@@ -3996,11 +4000,27 @@ rcedit@^0.5.0:
   version "0.5.1"
   resolved "https://registry.yarnpkg.com/rcedit/-/rcedit-0.5.1.tgz#d0bdcf5d280a9d1c29da6f118ccce2ce153cef1d"
 
+react-autosuggest:
+  version "6.1.0"
+  resolved "https://registry.yarnpkg.com/react-autosuggest/-/react-autosuggest-6.1.0.tgz#15587c872c795f5b092bedd0b3e373a0d43809d8"
+  dependencies:
+    react-autowhatever "^6.0.0"
+    react-redux "^4.4.5"
+    redux "^3.6.0"
+    shallow-equal "^1.0.0"
+
+react-autowhatever@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/react-autowhatever/-/react-autowhatever-6.0.0.tgz#3012ea2e0062d875df16c7fa5d4c0529fb7fe6e0"
+  dependencies:
+    react-themeable "^1.1.0"
+    section-iterator "^2.0.0"
+
 react-dom@^0.14.2:
   version "0.14.8"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-0.14.8.tgz#0f1c547514263f771bd31814a739e5306575069e"
 
-react-redux:
+react-redux, react-redux@^4.4.5:
   version "4.4.5"
   resolved "https://registry.yarnpkg.com/react-redux/-/react-redux-4.4.5.tgz#f509a2981be2252d10c629ef7c559347a4aec457"
   dependencies:
@@ -4022,6 +4042,12 @@ react-router:
 react-router-redux:
   version "4.0.6"
   resolved "https://registry.yarnpkg.com/react-router-redux/-/react-router-redux-4.0.6.tgz#10cf98dce911d7dd912a05bdb07fee4d3c563dee"
+
+react-themeable@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/react-themeable/-/react-themeable-1.1.0.tgz#7d4466dd9b2b5fa75058727825e9f152ba379a0e"
+  dependencies:
+    object-assign "^3.0.0"
 
 react@^0.14.2:
   version "0.14.8"
@@ -4144,7 +4170,7 @@ reduce-function-call@^1.0.1:
   dependencies:
     balanced-match "~0.1.0"
 
-redux:
+redux, redux@^3.6.0:
   version "3.6.0"
   resolved "https://registry.yarnpkg.com/redux/-/redux-3.6.0.tgz#887c2b3d0b9bd86eca2be70571c27654c19e188d"
   dependencies:
@@ -4356,6 +4382,10 @@ sax@~1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/sax/-/sax-1.2.1.tgz#7b8e656190b228e81a66aea748480d828cd2d37a"
 
+section-iterator@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/section-iterator/-/section-iterator-2.0.0.tgz#bf444d7afeeb94ad43c39ad2fb26151627ccba2a"
+
 semver-diff@^2.0.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/semver-diff/-/semver-diff-2.1.0.tgz#4bbb8437c8d37e4b0cf1a68fd726ec6d645d6d36"
@@ -4383,6 +4413,10 @@ sha.js@^2.3.6:
   resolved "https://registry.yarnpkg.com/sha.js/-/sha.js-2.4.5.tgz#27d171efcc82a118b99639ff581660242b506e7c"
   dependencies:
     inherits "^2.0.1"
+
+shallow-equal@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/shallow-equal/-/shallow-equal-1.0.0.tgz#508d1838b3de590ab8757b011b25e430900945f7"
 
 shebang-regex@^1.0.0:
   version "1.0.0"

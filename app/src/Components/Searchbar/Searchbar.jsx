@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import AutoSuggest from '../AutoSuggest/AutoSuggest';
 import './searchbar.scss';
 
 /**
@@ -27,14 +28,17 @@ class Searchbar extends Component {
 
   render () {
     return (
-      <div className="search">
-        <form className="search-form">
-          <input type="search" placeholder="Search" id="search" className="search_field"></input>
-          <i className="fa fa-search search-icon"></i>
-          <input type="submit" id="submit" value="Submit" className="searchButton"></input>
-        </form>
-        <div className="dropdown" id="searchDropDown"></div>
-      </div>
+      <ul className="topbarSearch">
+        <div className="search">
+          <form className="search-form">
+            <input type="search" placeholder="Search" id="search" className="search_field"></input>
+            <i className="fa fa-search search-icon"></i>
+            <input type="submit" id="submit" value="Submit" className="searchButton"></input>
+          </form>
+          <div className="dropdown" id="searchDropDown"></div>
+        </div>
+        <AutoSuggest />
+      </ul>
     )
   }
 }

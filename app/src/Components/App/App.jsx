@@ -2,7 +2,8 @@ import React, { PropTypes } from 'react';
 import WindowActions from '../WindowActions/WindowActions';
 import HistoryActions from '../HistoryActions/HistoryActions';
 import Searchbar from '../Searchbar/Searchbar';
-import AppInfo from '../AppInfo/AppInfo';
+import AppUpdate from '../AppUpdate/AppUpdate';
+import SettingsDropdown from '../SettingsDropdown/SettingsDropdown';
 import './App.scss';
 
 const App = (props) => (
@@ -11,7 +12,10 @@ const App = (props) => (
       <WindowActions />
       <HistoryActions />
       <Searchbar />
-      <AppInfo />
+      <ul className="appInfo">
+        <SettingsDropdown />
+        <AppUpdate />
+      </ul>
     </header>
 
     {props.children}

@@ -16,7 +16,11 @@ class WindowActions extends Component {
   }
 
   get_linux_asset_image (image) {
-    return image.backgroundImage.split("assets/")[1].split(`")`)[0];
+    let return_value = '';
+    if (image != null) {
+      image.backgroundImage.split("assets/")[1].split(`")`)[0]
+    }
+    return return_value;
   }
 
   get linux_close_button () {
@@ -26,21 +30,43 @@ class WindowActions extends Component {
       </li>
     );
     if (process.platform === 'linux') {
+      let close_button_style = this.get_linux_asset_image(this.props.linux_theme.css.titlebar_button_titlebutton_close);
+      let close_button_hover_style = this.get_linux_asset_image(this.props.linux_theme.css.titlebar_button_titlebutton_close_hover);
+      let close_button_active_style = this.get_linux_asset_image(this.props.linux_theme.css.titlebar_button_titlebutton_close_active);
+
+      if (close_button_style === '') {
+        close_button_style = `public/img/fallback-images/titlebutton-close-dark.png`;
+      } else {
+        close_button_style = `${this.props.linux_theme.theme.gtk_folder}assets/${close_button_style}`;
+      }
+
+      if (close_button_hover_style === '') {
+        close_button_hover_style = `public/img/fallback-images/titlebutton-close-hover.png`;
+      } else {
+        close_button_hover_style = `${this.props.linux_theme.theme.gtk_folder}assets/${close_button_hover_style}`;
+      }
+
+      if (close_button_active_style === '') {
+        close_button_active_style = `public/img/fallback-images/titlebutton-close-active.png`;
+      } else {
+        close_button_active_style = `${this.props.linux_theme.theme.gtk_folder}assets/${close_button_active_style}`;
+      }
+
       const linux_close = css`
         cursor: initial !important;
-        background: url(${this.props.linux_theme.theme.gtk_folder}assets/${this.get_linux_asset_image(this.props.linux_theme.css.titlebar_button_titlebutton_close)}) !important;
+        background: url(${close_button_style}) !important;
         width: 18px !important;
         height: 18px !important;
         margin-top: 8px !important;
         background-size: cover !important;
 
         &:hover {
-          background: url(${this.props.linux_theme.theme.gtk_folder}assets/${this.get_linux_asset_image(this.props.linux_theme.css.titlebar_button_titlebutton_close_hover)}) !important;
+          background: url(${close_button_hover_style}) !important;
           background-size: cover !important;
         }
 
         &:active {
-          background: url(${this.props.linux_theme.theme.gtk_folder}assets/${this.get_linux_asset_image(this.props.linux_theme.css.titlebar_button_titlebutton_close_active)}) !important;
+          background: url(${close_button_active_style}) !important;
           background-size: cover !important;
         }
       `
@@ -54,31 +80,53 @@ class WindowActions extends Component {
 
   get linux_minimize_button () {
     let close_button = (
-      <li className="windowAction_item" onClick={this.closeApp} id="minimizeApp">
+      <li className="windowAction_item" onClick={this.minimizeApp} id="minimizeApp">
         <i className="fa fa-times"></i>
       </li>
     );
     if (process.platform === 'linux') {
+      let minimize_button_style = this.get_linux_asset_image(this.props.linux_theme.css.titlebar_button_titlebutton_minimize);
+      let minimize_button_hover_style = this.get_linux_asset_image(this.props.linux_theme.css.titlebar_button_titlebutton_minimize_hover);
+      let minimize_button_active_style = this.get_linux_asset_image(this.props.linux_theme.css.titlebar_button_titlebutton_minimize_active);
+
+      if (minimize_button_style === '') {
+        minimize_button_style = `public/img/fallback-images/titlebutton-minimize-dark.png`;
+      } else {
+        minimize_button_style = `${this.props.linux_theme.theme.gtk_folder}assets/${minimize_button_style}`;
+      }
+
+      if (minimize_button_hover_style === '') {
+        minimize_button_hover_style = `public/img/fallback-images/titlebutton-minimize-hover.png`;
+      } else {
+        minimize_button_hover_style = `${this.props.linux_theme.theme.gtk_folder}assets/${minimize_button_hover_style}`;
+      }
+
+      if (minimize_button_active_style === '') {
+        minimize_button_active_style = `public/img/fallback-images/titlebutton-minimize-active.png`;
+      } else {
+        minimize_button_active_style = `${this.props.linux_theme.theme.gtk_folder}assets/${minimize_button_active_style}`;
+      }
+
       const linux_close = css`
         cursor: initial !important;
-        background: url(${this.props.linux_theme.theme.gtk_folder}assets/${this.get_linux_asset_image(this.props.linux_theme.css.titlebar_button_titlebutton_minimize)}) !important;
+        background: url(${minimize_button_style}) !important;
         width: 18px !important;
         height: 18px !important;
         margin-top: 8px !important;
         background-size: cover !important;
 
         &:hover {
-          background: url(${this.props.linux_theme.theme.gtk_folder}assets/${this.get_linux_asset_image(this.props.linux_theme.css.titlebar_button_titlebutton_minimize_hover)}) !important;
+          background: url(${minimize_button_hover_style}) !important;
           background-size: cover !important;
         }
 
         &:active {
-          background: url(${this.props.linux_theme.theme.gtk_folder}assets/${this.get_linux_asset_image(this.props.linux_theme.css.titlebar_button_titlebutton_minimize_active)}) !important;
+          background: url(${minimize_button_active_style}) !important;
           background-size: cover !important;
         }
       `
       close_button = (
-        <li className={`${linux_close} windowAction_item`} onClick={this.closeApp} id="minimizeApp"></li>
+        <li className={`${linux_close} windowAction_item`} onClick={this.minimizeApp} id="minimizeApp"></li>
       );
     }
 
@@ -87,26 +135,51 @@ class WindowActions extends Component {
 
   get linux_maximize_button () {
     let close_button = (
-      <li className="windowAction_item" onClick={this.minimizeApp} id="expandApp">
+      <li className="windowAction_item" onClick={this.maximizeApp} id="expandApp">
           <i className="fa fa-plus"></i>
         </li>
     );
     if (process.platform === 'linux') {
+      let maximize_button_style = this.get_linux_asset_image(this.props.linux_theme.css.titlebar_button_titlebutton_maximize);
+      let maximize_button_hover_style = this.get_linux_asset_image(this.props.linux_theme.css.titlebar_button_titlebutton_maximize_hover);
+      let maximize_button_active_style = this.get_linux_asset_image(this.props.linux_theme.css.titlebar_button_titlebutton_maximize_active);
+
+      if (maximize_button_style === '') {
+        maximize_button_style = `public/img/fallback-images/titlebutton-maximize-dark.png`;
+      } else {
+        maximize_button_style = `${this.props.linux_theme.theme.gtk_folder}assets/${maximize_button_style}`;
+      }
+
+      if (maximize_button_hover_style === '') {
+        maximize_button_hover_style = `public/img/fallback-images/titlebutton-maximize-hover.png`;
+      } else {
+        maximize_button_hover_style = `${this.props.linux_theme.theme.gtk_folder}assets/${maximize_button_hover_style}`;
+      }
+
+      if (maximize_button_active_style === '') {
+        maximize_button_active_style = `public/img/fallback-images/titlebutton-maximize-active.png`;
+      } else {
+        maximize_button_active_style = `${this.props.linux_theme.theme.gtk_folder}assets/${maximize_button_active_style}`;
+      }
+
       const linux_close = css`
         cursor: initial !important;
-        background: url(${this.props.linux_theme.theme.gtk_folder}assets/${this.get_linux_asset_image(this.props.linux_theme.css.titlebar_button_titlebutton_maximize)}) !important;
+        background: url(/img/fallback-images/titlebutton-maximize-dark.png) !important;
+        background: url(${maximize_button_style}) !important;
         width: 18px !important;
         height: 18px !important;
         margin-top: 8px !important;
         background-size: cover !important;
 
         &:hover {
-          background: url(${this.props.linux_theme.theme.gtk_folder}assets/${this.get_linux_asset_image(this.props.linux_theme.css.titlebar_button_titlebutton_maximize_hover)}) !important;
+          background: url(/img/fallback-images/titlebutton-maximize-dark-hover.png) !important;
+          background: url(${maximize_button_hover_style}) !important;
           background-size: cover !important;
         }
 
         &:active {
-          background: url(${this.props.linux_theme.theme.gtk_folder}assets/${this.get_linux_asset_image(this.props.linux_theme.css.titlebar_button_titlebutton_maximize_active)}) !important;
+          background: url(/img/fallback-images/titlebutton-maximize-dark-active.png) !important;
+          background: url(${maximize_button_active_style}) !important;
           background-size: cover !important;
         }
       `

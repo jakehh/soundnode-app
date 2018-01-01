@@ -29,8 +29,8 @@ class WindowActions extends Component {
       const linux_close = css`
         cursor: initial !important;
         background: url(${this.props.linux_theme.theme.gtk_folder}assets/${this.get_linux_asset_image(this.props.linux_theme.css.titlebar_button_titlebutton_close)}) !important;
-        width: 22px !important;
-        height: 22px !important;
+        width: 18px !important;
+        height: 18px !important;
         margin-top: 8px !important;
         background-size: cover !important;
 
@@ -62,8 +62,8 @@ class WindowActions extends Component {
       const linux_close = css`
         cursor: initial !important;
         background: url(${this.props.linux_theme.theme.gtk_folder}assets/${this.get_linux_asset_image(this.props.linux_theme.css.titlebar_button_titlebutton_minimize)}) !important;
-        width: 22px !important;
-        height: 22px !important;
+        width: 18px !important;
+        height: 18px !important;
         margin-top: 8px !important;
         background-size: cover !important;
 
@@ -95,8 +95,8 @@ class WindowActions extends Component {
       const linux_close = css`
         cursor: initial !important;
         background: url(${this.props.linux_theme.theme.gtk_folder}assets/${this.get_linux_asset_image(this.props.linux_theme.css.titlebar_button_titlebutton_maximize)}) !important;
-        width: 22px !important;
-        height: 22px !important;
+        width: 18px !important;
+        height: 18px !important;
         margin-top: 8px !important;
         background-size: cover !important;
 

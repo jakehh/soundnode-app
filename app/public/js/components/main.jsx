@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 
 import HeaderActions from "./header/headerActions";
 import SettingsButton from "./header/settingsButton";
+let linux_theme = null;
 
 // While migration is happening
 // for every component group
@@ -11,8 +12,18 @@ import SettingsButton from "./header/settingsButton";
 // should combined into one component composing all header
 // components
 
+if (process.platform === "linux") {
+    const { theme } = require('@jakejarrett/gtk-theme');
+    const nativeCSS = require('native-css');
+    const converted = nativeCSS.convert(theme.css);
+    linux_theme = {
+        theme: theme,
+        css: converted
+    }
+}
+
 ReactDOM.render(
-    <HeaderActions />,
+    <HeaderActions linux_theme={linux_theme} />,
     document.querySelector(".headerActionsApp")
 );
 

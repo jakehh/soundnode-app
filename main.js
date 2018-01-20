@@ -168,10 +168,10 @@ ipcMain.on('closeApp', () => {
   }
 });
 
-//
-ipcMain.on('destroyApp', () => {
-  mainWindow.close();
-});
+// ?? Does this override default functionality?
+// ipcMain.on('destroyApp', () => {
+//   mainWindow.close();
+// });
 
 function showAndFocus() {
   mainWindow.show();

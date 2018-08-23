@@ -13,9 +13,10 @@ $user_image_size: 40px;
     @extend %clickable-block;
     width: $user_image_size;
     height: $user_image_size;
-    border-radius: $user_image_size;
+    border-radius: 10px;
     float: left;
     -webkit-user-drag: none;
+    box-shadow: 0 20px 24px -20px rgba(0, 0, 0, 0.7);
 }
 
 .user_inner {

@@ -28,7 +28,10 @@
 .songList_item_container_artwork {
   position: relative;
   width: 100%;
-  border: 1px solid $separatorDarkColor;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 20px 24px -20px rgba(0, 0, 0, 0.7);
+  border: 0;
 }
 
 .songList_item_artwork {
@@ -61,6 +64,9 @@
 }
 
 li.active {
+  & .songList_item_container_artwork {
+    filter: blur(10px);
+  }
   & .songList_item_song_button {
     opacity: 1;
   }
@@ -113,13 +119,14 @@ div.active {
 }
 
 .songList_item_song_tit {
-  font-size: 17px;
+  font-size: 0.9rem;
   margin: 5px 0;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
+  display: block;
   overflow: hidden;
-  height: 46px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 100%;
+
   &:hover {
     @extend .pointer;
   }

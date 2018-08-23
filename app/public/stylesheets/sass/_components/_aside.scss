@@ -1,11 +1,13 @@
 .aside {
-    background: $sectionBackground;
-    border-right: 1px solid $separatorDarkColor;
+    background: $bodyBackground;
     width: 200px;
     position: fixed;
-    top: 50px;
+    top: 49px;
     bottom: 0;
     left: 0;
+    box-shadow: 2px 5px 7px rgba(0, 0, 0, 0.4);
+    z-index: 101;
+    height: calc(100vh - 114px);
 }
 
 .header {
@@ -33,9 +35,9 @@
     }
 
     &.active a {
-        border-color: rgba(255, 255, 255, 0.5);
+        border-color: $scColor;
         background: rgba(255, 255, 255, 0.05);
-        color: #FFF;
+        color: $scColor;
     }
 }
 
@@ -43,7 +45,7 @@
     font-size: 13px;
     display: block;
     padding: 9px 0 9px 15px;
-    border-left: 1px solid transparent;
+    border-left: 2px solid transparent;
     -webkit-user-drag: none;
 
     &:hover, &:hover span {
